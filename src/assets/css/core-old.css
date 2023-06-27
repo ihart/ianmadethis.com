@@ -1,0 +1,305 @@
+/* HTML5 elements */
+header,
+footer,
+nav,
+section,
+article								{ display:block; }
+
+html 								{ /* height:100%; */ }
+body 								{ /* height:100%; */ font-size:62.5%; }
+
+
+
+
+
+/* Typography */
+@font-face 							{ font-family:'League Gothic'; src:url(../type/League Gothic.otf) format('truetype'); }
+@font-face 							{ font-family:'Raleway'; src:url(../type/raleway_thin.ttf) format('truetype'); }
+
+h1,
+#about h2,
+#work h2							{ font:56px/170px "League Gothic"; text-transform:uppercase; }
+
+#home p,
+#about h3,
+.project h3							{ font:70px/80px "Raleway"; }
+
+#home .psst,
+#about nav							{ font:22px "Raleway"; }
+
+.ih-nav li							{ font:20px "League Gothic"; text-transform:uppercase; }
+
+p, li								{ font:12px/14px "Helvetica Neue", Helvetica, Arial; color:#222; }
+
+
+
+
+
+/* Transitions */
+.ih-nav li,
+.ih-nav a
+									{
+									  -webkit-transition:all 250ms ease-out;
+									     -moz-transition:all 250ms ease-out;
+									          transition:all 250ms ease-out;
+									}
+
+
+.ih-nav li							{
+									  -webkit-transform:translate3d(10px, 0, 0);
+									     -moz-transform:translate3d(10px, 0, 0);
+									          transform:translate3d(10px, 0, 0);
+									}
+
+.ih-nav:hover li					{
+									  -webkit-transform:translate3d(0px, 0, 0);
+									     -moz-transform:translate3d(0px, 0, 0);
+									          transform:translate3d(0px, 0, 0);
+									}
+									
+.ih-nav a							{ opacity:0;
+									  -webkit-transform:translate3d(10px, 0, 0);
+									     -moz-transform:translate3d(10px, 0, 0);
+									          transform:translate3d(10px, 0, 0);
+									}
+
+.ih-nav:hover a						{ opacity:1;
+									  -webkit-transform:translate3d(0px, 0, 0);
+									     -moz-transform:translate3d(0px, 0, 0);
+									          transform:translate3d(0px, 0, 0);
+									}
+
+
+									
+.ih-nav .selected a					{ opacity:1; color:rgba(100, 100, 100, 0.5);
+									  -webkit-transform:translate3d(10px, 0, 0);
+									     -moz-transform:translate3d(10px, 0, 0);
+									          transform:translate3d(10px, 0, 0);
+									}
+.ih-nav:hover .selected a			{ opacity:1; color:rgba(212, 36, 86, 0.7);
+									  -webkit-transform:translate3d(0px, 0, 0);
+									     -moz-transform:translate3d(0px, 0, 0);
+									          transform:translate3d(0px, 0, 0);
+									}
+									
+.ih-nav .selected					{ background:transparent; }
+
+
+
+
+
+/* Site */
+body								{ background:#f1f1f1; /* overflow:hidden; */ }
+#home section,
+#about section						{ width:82.7%; margin:0 8.65%; }
+/* h2									{ height:180px; line-height:170px; } */
+/* .js h2 span							{ display:none; } */
+p									{ margin:0; padding:0.25em 0; }
+a									{ color:#d42456; border-bottom:1px solid #aaa; text-decoration:none; 
+									  -webkit-transition:border-color 0.3s ease-out;
+									     -moz-transition:border-color 0.3s ease-out;
+									     	  transition:border-color 0.3s ease-out;
+									}
+a:hover								{ border-color:#f1f1f1; }
+.clearfix:before, 
+.clearfix:after 					{ content:"\0020"; display:block; height:0; overflow:hidden; }
+.clearfix:after 					{ clear:both; }
+
+.ih-nav								{ width:15%; height:100%; position:fixed; right:0; top:0; z-index:2000; }
+.ih-nav ul							{ width:20px; height:100%; position:absolute; right:0; top:0; }
+.ih-nav li							{ width:100%; height:20%; border-bottom:2px solid rgba(200, 200, 200, 1); -webkit-box-sizing:border-box; position:relative; list-style:none; }
+.ih-nav a							{ width:200px; height:100%; line-height:170px; padding-right:40px; display:block; border-bottom:none; position:absolute; right:0; top:0; text-align:right; color:rgba(100, 100, 100, 0.3); }
+.ih-nav a:hover						{ color:rgba(100, 100, 100, 0.8); }
+
+
+
+
+
+/* Page structure */
+.page								{ /* margin-top:200px; */ padding-bottom:200px; position:relative; overflow:visible; }
+.page header						{ width:100%; height:180px; padding:30px 0; float:left; }
+.page section						{ width:100%; height:100%; height:auto; float:left; }
+
+
+
+
+
+/* Site Header */
+#site-header						{ width:100%; height:180px; padding:30px 0; }
+.js #site-header					{ /* position:fixed; left:0; top:0; z-index:1000; */ }
+#site-header .row					{ overflow:visible; }
+
+/* Title */
+.title								{ position:relative; width:270px; height:176px; line-height:170px; display:inline-block; color:#f1f1f1; text-indent:25px; background:url(../img/logo.png) no-repeat;
+									  -webkit-transform:translate3d(0, 0, 0);
+									     -moz-transform:translateX(0); 									     
+									  -webkit-transition:-webkit-transform 0.2s ease-out, opacity 0.2s ease-out; 
+									     -moz-transition:-moz-transform 0.2s ease-out, opacity 0.2s ease-out; 
+									}
+.title span							{ width:22px; height:100px; display:block; position:absolute; left:180px; top:75px; background:url(../img/arrow.png) no-repeat bottom; 
+									  -webkit-transform-origin:top;
+									  -webkit-transform:rotate(340deg);
+									  -webkit-transition:-webkit-transform 0.3s ease-out;
+									}
+
+.title:hover span					{ -webkit-transform:rotate(180deg) }
+.title:hover span:before			{ content:"\00a0"; width:3px; height:8px; position:absolute; right:3px; bottom:6px; background:#000; }
+.title:hover span:after				{ content:"\00a0"; width:3px; height:8px; position:absolute; right:10px; bottom:22px; background:#f1f1f1; }
+
+h1.about							{ -webkit-transform:translate3d(130px, 0, 0); 
+									     -moz-transform:translateX(130px); 
+									}
+#site-header p						{ display:none; }
+#site-header nav					{ display:none; }
+
+
+
+
+
+/* Home */
+#home								{ margin-top:0; }
+#home header						{ display:none; }
+/* #home h2							{ display:none; } */
+#home .psst							{ padding-top:0.5em; }
+#home span							{ text-decoration:line-through; color:#aaa; }
+
+
+
+
+
+/* About */
+#about .contact						{ position:absolute; right:0; top:100px; }
+#about nav							{ position:absolute; left:0; bottom:50px; }
+#about header						{ visibility:hidden; }
+/*
+#about .eightcol					{ min-height:300px; 
+									  -webkit-column-count:2; 
+									     -moz-column-count:2;
+									          column-count:2;
+									  -webkit-column-gap:40px;
+									     -moz-column-gap:40px;  
+									   	      column-gap:40px;
+									}
+*/
+#about .eightcol p					{ padding:0 0 14px 0; }
+
+
+
+
+
+/* Work */
+/* .js #work h2						{ text-indent:260px; } */
+#work header						{ visibility:hidden; }
+#work nav							{  }
+#work nav ul						{ display:none; }
+#work nav a							{ border:none; }
+.project							{ min-height:400px; }
+.project h3							{ }
+.project p							{ float:left; }
+.project ul							{ float:left; }
+.project li							{ margin:10px; float:left; list-style:none; }
+.project a							{ border:none; }
+#tesco-ipad							{ }
+
+
+
+
+
+/* Media query changes */
+@media only screen and (max-width: 1220px) {
+
+	#site-header h1						{ margin-left:20px; }
+
+}
+
+
+@media only screen and (max-width: 1175px) {
+
+	#site-header h1						{ margin-left:0px; }
+
+	#about h3							{ font-size:60px; line-height:70px; }
+
+}
+
+
+/* Smaller screens */
+@media only screen and (max-width: 1023px) {;
+
+
+	#about .eightcol					{
+										  -webkit-column-count:1; 
+									   	     -moz-column-count:1;
+									              column-count:1;
+										}									
+	#about h3							{ font-size:50px; line-height:60px; }
+
+}
+
+
+
+
+
+/* Mobile */
+@media handheld, only screen and (max-width: 767px) {
+
+	#site-header h1						{ margin-left:0; }
+
+	#home .tencol						{ margin-left:0; }
+	
+	#about nav							{ left:20px; }
+	#about h3							{ margin-bottom:20px; }
+	#about .eightcol					{
+										  -webkit-column-count:2; 
+										     -moz-column-count:2;
+										          column-count:2;
+										  -webkit-column-gap:20px;
+										     -moz-column-gap:20px;  
+										   	      column-gap:20px;
+										}
+
+}
+
+
+
+
+
+/* Smaller Mobile */
+@media handheld, only screen and (max-width: 480px) {
+
+	h1,
+	#about h2,
+	#work h2							{ font-size:42px; line-height:50px; }
+
+	#home p,
+	#about h3							{ font-size:36px; line-height:40px; }
+	
+	#home .psst,
+	#about nav							{ font-size:18px; }
+
+	body								{ overflow:visible; }
+	
+	#work h2							{ margin-left:0; }
+
+	#about .eightcol					{
+										  -webkit-column-count:1; 
+										     -moz-column-count:1;
+										          column-count:1;
+										}
+
+}
+
+
+
+
+
+/* Provide higher res assets for iPhone 4 */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+
+/* An example of how to override an image with one twice the size for iPhone 4. Specify the original pixel size with background-size.
+.download {
+background: url(../img/downarrow@2x.png) no-repeat;
+background-size: 27px 28px;
+}
+*/
+
+}
